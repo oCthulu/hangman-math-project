@@ -23,7 +23,7 @@ namespace Hangman.DataAnalysis{
     public static class Analysis{
         public static void AnalyseData(string file, string destinationDirectory, WordDictionary words){
             Console.WriteLine($"Reading file {file}.hgr");
-            GameRecord[] games = ReadFile(file + ".hgr", words);
+            GameRecord[] games = ReadFile("results/" + file + ".hgr", words);
 
             Console.WriteLine("Analysing data...");
             //maximun possible game length is 26
