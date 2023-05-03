@@ -28,7 +28,7 @@ internal class Program
                         guesserCreater = RandomGuesser.CreateNew();
                         break;
                     case "weighted":
-                        guesserCreater = WeightedRandomGuesser.CreateNew(words.characterFrequeances);
+                        guesserCreater = WeightedRandomGuesser.CreateNew(words.characterFrequeances ?? throw new Exception("Supplied dictionary does not have letter frequeances calculated"));
                         break;
                     default:
                         throw new Exception($"\"{args[i+1]}\" is not a valid guesser type");

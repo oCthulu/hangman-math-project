@@ -1,5 +1,5 @@
-### /results
-This is the directory with the results, stored in propritary `.hgr` (which stands for "hangman game record") files.
+# results
+This is the directory with the results, stored in custom `.hgr` (which stands for "hangman game record") files.
 ## File Format
 The file begins with a 4 byte signed integer which specify the amount of games in the file. This is immedately followed by the data for the games. The data for each game is stored as follows:
  - A 4 byte signed integer storing the word for the game. This is the index into the words defined in the `/words.json` file

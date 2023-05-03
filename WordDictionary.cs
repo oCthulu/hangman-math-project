@@ -3,7 +3,7 @@ using static Hangman.Utilities;
 
 namespace Hangman{
     public class WordDictionary{
-        public WeightedRandomPool<byte> characterFrequeances;
+        public WeightedRandomPool<byte>? characterFrequeances;
         public Word[] words;
 
         public WordDictionary(string json){
@@ -37,6 +37,11 @@ namespace Hangman{
             }
 
             characterFrequeances.RecalculateTotalWeight();
+        }
+
+        public WordDictionary(WordDictionary copyFrom){
+            words = new Word[copyFrom.words.Length];
+            copyFrom.words.CopyTo(words, 0);
         }
     }
 }

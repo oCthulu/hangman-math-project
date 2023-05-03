@@ -57,6 +57,26 @@ namespace Hangman{
         }
     }
 
+    // Unfinished intellegant guesser
+    // public class IntellegantGuesser : Guesser
+    // {
+    //     public List<Word> validWords;
+    //     public IntellegantGuesser(Executioner executioner, WordDictionary dictionary) : base(executioner)
+    //     {
+    //         validWords = new List<Word>();
+
+    //         for (int i = 0; i < dictionary.words.Length; i++)
+    //         {
+    //             if(dictionary.words[i].Length == board.revealedWord.Length) validWords.Add(dictionary.words[i]);
+    //         }
+    //     }
+
+    //     public override byte GetGuess()
+    //     {
+    //         throw new NotImplementedException();
+    //     }
+    // }
+
     public class PlayerGuesser : Guesser
     {
         public PlayerGuesser(Executioner executioner) : base(executioner){}
